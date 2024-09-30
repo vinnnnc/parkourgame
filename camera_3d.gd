@@ -1,7 +1,8 @@
 extends Camera3D
 
 var target: CharacterBody3D
-var smooth_speed: float = 5.0
+@export var smooth_speed: float = 5.0
+@export var enable_cam_follow = true
 
 func _ready():
 	# Adjust the path based on your scene hierarchy
@@ -18,4 +19,5 @@ func _physics_process(delta):
 	var target_pos = target.global_transform.origin + Vector3(0, 2, 5) # Offset behind the character
 	
 	# Smoothly interpolate the camera position
-	global_transform.origin = current_pos.lerp(target_pos, smooth_speed * delta)
+	if enable_cam_follow:
+		global_transform.origin = current_pos.lerp(target_pos, smooth_speed * delta)
