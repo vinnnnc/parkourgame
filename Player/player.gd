@@ -11,6 +11,7 @@ var WALL_JUMP_VELOCITY = Vector3(WALL_JUMP_VELOCITY_X, WALL_JUMP_VELOCITY_y, 0) 
 @export var JUMP_DELAY = 0.5 # Time in seconds to delay the jump
 @export var RUN_JUMP_DELAY = 0.2 # Time in seconds to delay the run jump
 
+#asd
 # Variables
 var current_velocity := Vector3.ZERO
 var can_wall_jump = false
